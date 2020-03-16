@@ -1,0 +1,12 @@
+C:\Users\AeryIce\source\repos\EduTheGreat\bin\Debug\EduTheGreat.exe.config
+C:\Users\AeryIce\source\repos\EduTheGreat\bin\Debug\EduTheGreat.exe
+C:\Users\AeryIce\source\repos\EduTheGreat\bin\Debug\EduTheGreat.pdb
+C:\Users\AeryIce\source\repos\EduTheGreat\bin\Debug\EduTheGreat.xml
+C:\Users\AeryIce\source\repos\EduTheGreat\obj\Debug\EduTheGreat.vbprojAssemblyReference.cache
+C:\Users\AeryIce\source\repos\EduTheGreat\obj\Debug\EduTheGreat.FormLogin.resources
+C:\Users\AeryIce\source\repos\EduTheGreat\obj\Debug\EduTheGreat.Resources.resources
+C:\Users\AeryIce\source\repos\EduTheGreat\obj\Debug\EduTheGreat.vbproj.GenerateResource.cache
+C:\Users\AeryIce\source\repos\EduTheGreat\obj\Debug\EduTheGreat.exe
+C:\Users\AeryIce\source\repos\EduTheGreat\obj\Debug\EduTheGreat.xml
+C:\Users\AeryIce\source\repos\EduTheGreat\obj\Debug\EduTheGreat.pdb
+C:\Users\AeryIce\source\repos\EduTheGreat\obj\Debug\EduTheGreat.FormHome.resources
