@@ -8,7 +8,7 @@ Module ModuleKoneksi
 
 	Sub Koneksi()
 		Try
-			Conn = New SqlConnection("Data Source =AERYICE-PC666; Initial Catalog = EDU; Integrated Security = True")
+			Conn = New SqlConnection("Data Source =AERYICE-PC666\SQLEXPRESS2012; Initial Catalog = EDU; Integrated Security = True")
 			Conn.Open()
 			FormLogin.LabelStatusDb.Text = "Connected"
 		Catch ex As Exception

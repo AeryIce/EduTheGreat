@@ -14,7 +14,7 @@ Public Class FormLogin
 		Dr = Cmd.ExecuteReader
 		If Dr.HasRows Then
 			FormHome.Show()
-			Me.Close()
+			Me.Visible = False
 		Else
 			If MsgBox("UserName dan Password Tidak Terdaftar, Ulangi Login?", MsgBoxStyle.YesNo, "Konfimasi") = MsgBoxResult.Yes Then
 				TextBoxLoginUserName.Text = ""
@@ -31,7 +31,7 @@ Public Class FormLogin
 	End Sub
 
 	Private Sub ButtonCancel_Click(sender As Object, e As EventArgs) Handles ButtonCancel.Click
-		If MsgBox("Yakin Logout?", MsgBoxStyle.YesNo, "Konfirmasi") = MsgBoxResult.Yes Then
+		If MsgBox("Quit ?", MsgBoxStyle.YesNo, "Confirmation") = MsgBoxResult.Yes Then
 			Me.Close()
 		Else
 			TextBoxLoginUserName.Text = ""
