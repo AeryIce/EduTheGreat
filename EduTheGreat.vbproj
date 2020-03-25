@@ -147,5 +147,26 @@
   <ItemGroup>
     <None Include="Resources\key_2_32px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enter_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_sign_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\books_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stationery_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Periplus Education.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

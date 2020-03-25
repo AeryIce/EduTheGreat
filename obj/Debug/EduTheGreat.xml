@@ -22,7 +22,32 @@ EduTheGreat
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:EduTheGreat.My.Resources.Resources.book_32px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:EduTheGreat.My.Resources.Resources.books_32px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:EduTheGreat.My.Resources.Resources.cancel_32px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:EduTheGreat.My.Resources.Resources.enter_32px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:EduTheGreat.My.Resources.Resources.exit_sign_32px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:EduTheGreat.My.Resources.Resources.home_32px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -43,6 +68,16 @@ EduTheGreat
 </summary>
 </member>
 <member name="P:EduTheGreat.My.Resources.Resources.password_96px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:EduTheGreat.My.Resources.Resources.Periplus_Education">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:EduTheGreat.My.Resources.Resources.stationery_32px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
