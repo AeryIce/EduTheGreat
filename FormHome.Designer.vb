@@ -24,17 +24,17 @@ Partial Class FormHome
 	Private Sub InitializeComponent()
 		Me.PanelKiri = New System.Windows.Forms.Panel()
 		Me.Panel5 = New System.Windows.Forms.Panel()
+		Me.ButtonReport = New System.Windows.Forms.Button()
 		Me.Panel4 = New System.Windows.Forms.Panel()
+		Me.ButtonAdmin = New System.Windows.Forms.Button()
 		Me.Panel6 = New System.Windows.Forms.Panel()
+		Me.ButtonBook = New System.Windows.Forms.Button()
 		Me.Panel3 = New System.Windows.Forms.Panel()
 		Me.Panel2 = New System.Windows.Forms.Panel()
-		Me.Panel1 = New System.Windows.Forms.Panel()
-		Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-		Me.ButtonReport = New System.Windows.Forms.Button()
-		Me.ButtonAdmin = New System.Windows.Forms.Button()
-		Me.ButtonBook = New System.Windows.Forms.Button()
 		Me.ButtonExit = New System.Windows.Forms.Button()
 		Me.ButtonHome = New System.Windows.Forms.Button()
+		Me.Panel1 = New System.Windows.Forms.Panel()
+		Me.PictureBox1 = New System.Windows.Forms.PictureBox()
 		Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
 		Me.PanelKiri.SuspendLayout()
 		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -66,55 +66,6 @@ Partial Class FormHome
 		Me.Panel5.Size = New System.Drawing.Size(11, 32)
 		Me.Panel5.TabIndex = 8
 		'
-		'Panel4
-		'
-		Me.Panel4.BackColor = System.Drawing.Color.Yellow
-		Me.Panel4.Location = New System.Drawing.Point(1, 172)
-		Me.Panel4.Name = "Panel4"
-		Me.Panel4.Size = New System.Drawing.Size(11, 32)
-		Me.Panel4.TabIndex = 4
-		'
-		'Panel6
-		'
-		Me.Panel6.BackColor = System.Drawing.Color.Yellow
-		Me.Panel6.Location = New System.Drawing.Point(1, 210)
-		Me.Panel6.Name = "Panel6"
-		Me.Panel6.Size = New System.Drawing.Size(11, 32)
-		Me.Panel6.TabIndex = 6
-		'
-		'Panel3
-		'
-		Me.Panel3.BackColor = System.Drawing.Color.Yellow
-		Me.Panel3.Location = New System.Drawing.Point(3, 339)
-		Me.Panel3.Name = "Panel3"
-		Me.Panel3.Size = New System.Drawing.Size(11, 32)
-		Me.Panel3.TabIndex = 3
-		'
-		'Panel2
-		'
-		Me.Panel2.BackColor = System.Drawing.Color.Yellow
-		Me.Panel2.Location = New System.Drawing.Point(1, 134)
-		Me.Panel2.Name = "Panel2"
-		Me.Panel2.Size = New System.Drawing.Size(11, 32)
-		Me.Panel2.TabIndex = 2
-		'
-		'Panel1
-		'
-		Me.Panel1.BackColor = System.Drawing.Color.Yellow
-		Me.Panel1.Location = New System.Drawing.Point(0, 0)
-		Me.Panel1.Name = "Panel1"
-		Me.Panel1.Size = New System.Drawing.Size(801, 95)
-		Me.Panel1.TabIndex = 1
-		'
-		'PictureBox1
-		'
-		Me.PictureBox1.Image = Global.EduTheGreat.My.Resources.Resources.Periplus_Education
-		Me.PictureBox1.Location = New System.Drawing.Point(184, 134)
-		Me.PictureBox1.Name = "PictureBox1"
-		Me.PictureBox1.Size = New System.Drawing.Size(554, 237)
-		Me.PictureBox1.TabIndex = 2
-		Me.PictureBox1.TabStop = False
-		'
 		'ButtonReport
 		'
 		Me.ButtonReport.BackColor = System.Drawing.Color.LightSkyBlue
@@ -130,6 +81,14 @@ Partial Class FormHome
 		Me.ButtonReport.Text = "Report"
 		Me.ButtonReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight
 		Me.ButtonReport.UseVisualStyleBackColor = False
+		'
+		'Panel4
+		'
+		Me.Panel4.BackColor = System.Drawing.Color.Yellow
+		Me.Panel4.Location = New System.Drawing.Point(1, 172)
+		Me.Panel4.Name = "Panel4"
+		Me.Panel4.Size = New System.Drawing.Size(11, 32)
+		Me.Panel4.TabIndex = 4
 		'
 		'ButtonAdmin
 		'
@@ -147,6 +106,14 @@ Partial Class FormHome
 		Me.ButtonAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight
 		Me.ButtonAdmin.UseVisualStyleBackColor = False
 		'
+		'Panel6
+		'
+		Me.Panel6.BackColor = System.Drawing.Color.Yellow
+		Me.Panel6.Location = New System.Drawing.Point(1, 210)
+		Me.Panel6.Name = "Panel6"
+		Me.Panel6.Size = New System.Drawing.Size(11, 32)
+		Me.Panel6.TabIndex = 6
+		'
 		'ButtonBook
 		'
 		Me.ButtonBook.BackColor = System.Drawing.Color.LightSkyBlue
@@ -162,6 +129,22 @@ Partial Class FormHome
 		Me.ButtonBook.Text = "Books"
 		Me.ButtonBook.TextAlign = System.Drawing.ContentAlignment.MiddleRight
 		Me.ButtonBook.UseVisualStyleBackColor = False
+		'
+		'Panel3
+		'
+		Me.Panel3.BackColor = System.Drawing.Color.Yellow
+		Me.Panel3.Location = New System.Drawing.Point(3, 339)
+		Me.Panel3.Name = "Panel3"
+		Me.Panel3.Size = New System.Drawing.Size(11, 32)
+		Me.Panel3.TabIndex = 3
+		'
+		'Panel2
+		'
+		Me.Panel2.BackColor = System.Drawing.Color.Yellow
+		Me.Panel2.Location = New System.Drawing.Point(1, 134)
+		Me.Panel2.Name = "Panel2"
+		Me.Panel2.Size = New System.Drawing.Size(11, 32)
+		Me.Panel2.TabIndex = 2
 		'
 		'ButtonExit
 		'
@@ -194,6 +177,23 @@ Partial Class FormHome
 		Me.ButtonHome.Text = "Home"
 		Me.ButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight
 		Me.ButtonHome.UseVisualStyleBackColor = False
+		'
+		'Panel1
+		'
+		Me.Panel1.BackColor = System.Drawing.Color.Yellow
+		Me.Panel1.Location = New System.Drawing.Point(0, 0)
+		Me.Panel1.Name = "Panel1"
+		Me.Panel1.Size = New System.Drawing.Size(801, 95)
+		Me.Panel1.TabIndex = 1
+		'
+		'PictureBox1
+		'
+		Me.PictureBox1.Image = Global.EduTheGreat.My.Resources.Resources.Periplus_Education
+		Me.PictureBox1.Location = New System.Drawing.Point(184, 134)
+		Me.PictureBox1.Name = "PictureBox1"
+		Me.PictureBox1.Size = New System.Drawing.Size(554, 237)
+		Me.PictureBox1.TabIndex = 2
+		Me.PictureBox1.TabStop = False
 		'
 		'TableLayoutPanel1
 		'

@@ -77,6 +77,16 @@ EduTheGreat
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:EduTheGreat.My.Resources.Resources.search_16px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:EduTheGreat.My.Resources.Resources.search_64px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:EduTheGreat.My.Resources.Resources.stationery_32px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

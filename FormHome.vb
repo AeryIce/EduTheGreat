@@ -52,4 +52,10 @@
     Private Sub FormHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub ButtonBook_Click(sender As Object, e As EventArgs) Handles ButtonBook.Click
+        FormBook.Show()
+        Me.Close()
+
+    End Sub
 End Class

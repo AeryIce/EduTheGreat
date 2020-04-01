@@ -14,7 +14,6 @@ D:\VisualBasic\EduTheGreat\bin\Debug\EduTheGreat.exe.config
 D:\VisualBasic\EduTheGreat\bin\Debug\EduTheGreat.exe
 D:\VisualBasic\EduTheGreat\bin\Debug\EduTheGreat.pdb
 D:\VisualBasic\EduTheGreat\bin\Debug\EduTheGreat.xml
-D:\VisualBasic\EduTheGreat\obj\Debug\EduTheGreat.vbprojAssemblyReference.cache
 D:\VisualBasic\EduTheGreat\obj\Debug\EduTheGreat.FormHome.resources
 D:\VisualBasic\EduTheGreat\obj\Debug\EduTheGreat.FormLogin.resources
 D:\VisualBasic\EduTheGreat\obj\Debug\EduTheGreat.Resources.resources
@@ -22,3 +21,5 @@ D:\VisualBasic\EduTheGreat\obj\Debug\EduTheGreat.vbproj.GenerateResource.cache
 D:\VisualBasic\EduTheGreat\obj\Debug\EduTheGreat.exe
 D:\VisualBasic\EduTheGreat\obj\Debug\EduTheGreat.xml
 D:\VisualBasic\EduTheGreat\obj\Debug\EduTheGreat.pdb
+D:\VisualBasic\EduTheGreat\obj\Debug\EduTheGreat.vbprojAssemblyReference.cache
+D:\VisualBasic\EduTheGreat\obj\Debug\EduTheGreat.FormBook.resources
