@@ -1,7 +1,32 @@
-﻿Public Class FormBook
+﻿Imports System.Data.SqlClient
+Public Class FormBook
 
     Sub BersihkanTextBoxCariBuku()
         TextBoxCariBuku.Clear()
+    End Sub
+
+    Sub LoadDGVBook()
+        Call Koneksi()
+        Da = New SqlDataAdapter("SELECT * FROM Stock_Sample_Edu", Conn)
+        Ds = New DataSet
+        Da.Fill(Ds)
+        DGVBook.DataSource = Ds.Tables(0)
+        DGVBook.ReadOnly = True
+    End Sub
+
+    Private Sub FormHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TextBoxISBN.ReadOnly = True
+        'TextBoxJudul.ReadOnly = True
+        'TextBoxKategori.ReadOnly = True
+        'TextBox1StDateIn.ReadOnly = True
+        'TextBoxBinlok.ReadOnly = True
+        'TextBoxCIP.ReadOnly = True
+        'TextBoxPengarang.ReadOnly = True
+        'TextBoxPublisher.ReadOnly = True
+        'TextBoxQty.ReadOnly = True
+        'TextBoxSubject.ReadOnly = True
+        Call LoadDGVBook()
+
     End Sub
     Private Sub ButtonExit_Click(sender As Object, e As EventArgs) Handles ButtonExit.Click
         Me.Close()
@@ -53,19 +78,100 @@
     End Sub
 
 
-    Private Sub FormHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub ButtonBook_Click(sender As Object, e As EventArgs) Handles ButtonBook.Click
 
     End Sub
 
-    Private Sub TextBoxCariBuku_TextChanged(sender As Object, e As EventArgs) Handles TextBoxCariBuku.TextChanged
 
-    End Sub
 
     Private Sub TextBoxCariBuku_Click(sender As Object, e As EventArgs) Handles TextBoxCariBuku.Click
         Call BersihkanTextBoxCariBuku()
+
+    End Sub
+
+    Private Sub TextBoxCariBuku_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxCariBuku.KeyPress
+        If e.KeyChar = Chr(13) Then
+            If TextBoxCariBuku.Text = "" Then
+                Call Koneksi()
+
+                Da = New SqlDataAdapter("SELECT * FROM Stock_Sample_Edu WHERE ISBN = '" & TextBoxCariBuku.Text & "' ", Conn)
+                Ds = New DataSet
+                Da.Fill(Ds)
+                DGVBook.DataSource = Ds.Tables(0)
+            Else
+                Call Koneksi()
+                Cmd = New SqlCommand("SELECT * FROM Stock_Sample_Edu WHERE ISBN = '" & TextBoxCariBuku.Text & "' ", Conn)
+                Dr = Cmd.ExecuteReader
+                Dr.Read()
+                If Dr.HasRows Then
+                    Call Koneksi()
+
+                    Da = New SqlDataAdapter("SELECT * FROM Stock_Sample_Edu WHERE ISBN = '" & TextBoxCariBuku.Text & "' ", Conn)
+                    Ds = New DataSet
+                    Da.Fill(Ds)
+                    DGVBook.DataSource = Ds.Tables(0)
+
+                    TextBoxISBN.Text = Dr.Item("ISBN")
+                    TextBox1StDateIn.Text = Dr.Item("FirstDateIn")
+                    TextBoxBinlok.Text = Dr.Item("Binlok")
+                    TextBoxCIP.Text = Dr.Item("CIP")
+                    TextBoxJudul.Text = Dr.Item("Judul")
+                    TextBoxKategori.Text = Dr.Item("Kategori")
+                    TextBoxPengarang.Text = Dr.Item("Pengarang")
+                    TextBoxPublisher.Text = Dr.Item("Publiser")
+                    TextBoxQty.Text = Dr.Item("Qty")
+                    TextBoxSubject.Text = Dr.Item("Subject")
+                Else
+                    If MsgBox("Maaf,Data Tidak Ada, Ulangi?", MsgBoxStyle.YesNo, "Konfirmasi") = MsgBoxResult.Yes Then
+
+                        Call BersihkanTextBoxCariBuku()
+                        Call LoadDGVBook()
+
+                        TextBoxCariBuku.Focus()
+
+                    Else
+                        FormHome.Show()
+                        Me.Close()
+
+                    End If
+
+                End If
+            End If
+            Call Koneksi()
+            Cmd = New SqlCommand("SELECT * FROM Stock_Sample_Edu WHERE ISBN = '" & TextBoxCariBuku.Text & "' ", Conn)
+            Dr = Cmd.ExecuteReader
+            Dr.Read()
+            If Dr.HasRows Then
+                Call Koneksi()
+
+                Da = New SqlDataAdapter("SELECT * FROM Stock_Sample_Edu WHERE ISBN = '" & TextBoxCariBuku.Text & "' ", Conn)
+                Ds = New DataSet
+                Da.Fill(Ds)
+                DGVBook.DataSource = Ds.Tables(0)
+
+                TextBoxISBN.Text = Dr.Item("ISBN")
+                TextBox1StDateIn.Text = Dr.Item("FirstDateIn")
+                TextBoxBinlok.Text = Dr.Item("Binlok")
+                TextBoxCIP.Text = Dr.Item("CIP")
+                TextBoxJudul.Text = Dr.Item("Judul")
+                TextBoxKategori.Text = Dr.Item("Kategori")
+                TextBoxPengarang.Text = Dr.Item("Pengarang")
+                TextBoxPublisher.Text = Dr.Item("Publiser")
+                TextBoxQty.Text = Dr.Item("Qty")
+                TextBoxSubject.Text = Dr.Item("Subject")
+            Else
+                If MsgBox("Maaf,Data Tidak Ada, Ulangi?", MsgBoxStyle.YesNo, "Konfirmasi") = MsgBoxResult.Yes Then
+                    Me.Show()
+                    Call BersihkanTextBoxCariBuku()
+                    TextBoxCariBuku.Focus()
+                Else
+                    FormHome.Show()
+                    Me.Close()
+
+                End If
+
+            End If
+        End If
+
     End Sub
 End Class

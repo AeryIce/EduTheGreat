@@ -2,7 +2,7 @@
 Module ModuleKoneksi
 	Public Conn As SqlConnection
 	Public Dr As SqlDataReader
-	Public Da As SqlDataReader
+	Public Da As SqlDataAdapter
 	Public Ds As DataSet
 	Public Cmd As SqlCommand
 

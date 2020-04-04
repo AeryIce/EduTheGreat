@@ -183,5 +183,20 @@
   <ItemGroup>
     <None Include="Resources\search_16px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_file_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_file_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_file_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash_16px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\available_updates_16px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
