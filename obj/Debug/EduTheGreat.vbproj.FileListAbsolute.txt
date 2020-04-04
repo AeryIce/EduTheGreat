@@ -23,3 +23,17 @@ D:\VisualBasic\EduTheGreat\obj\Debug\EduTheGreat.xml
 D:\VisualBasic\EduTheGreat\obj\Debug\EduTheGreat.pdb
 D:\VisualBasic\EduTheGreat\obj\Debug\EduTheGreat.vbprojAssemblyReference.cache
 D:\VisualBasic\EduTheGreat\obj\Debug\EduTheGreat.FormBook.resources
+D:\LEARNN\Programming\VB\Latihan\AeryIce\EduTheGreat\bin\Debug\EduTheGreat.exe.config
+D:\LEARNN\Programming\VB\Latihan\AeryIce\EduTheGreat\bin\Debug\EduTheGreat.exe
+D:\LEARNN\Programming\VB\Latihan\AeryIce\EduTheGreat\bin\Debug\EduTheGreat.pdb
+D:\LEARNN\Programming\VB\Latihan\AeryIce\EduTheGreat\bin\Debug\EduTheGreat.xml
+D:\LEARNN\Programming\VB\Latihan\AeryIce\EduTheGreat\obj\Debug\EduTheGreat.vbprojAssemblyReference.cache
+D:\LEARNN\Programming\VB\Latihan\AeryIce\EduTheGreat\obj\Debug\EduTheGreat.FormBook.resources
+D:\LEARNN\Programming\VB\Latihan\AeryIce\EduTheGreat\obj\Debug\EduTheGreat.FormHome.resources
+D:\LEARNN\Programming\VB\Latihan\AeryIce\EduTheGreat\obj\Debug\EduTheGreat.FormLogin.resources
+D:\LEARNN\Programming\VB\Latihan\AeryIce\EduTheGreat\obj\Debug\EduTheGreat.Resources.resources
+D:\LEARNN\Programming\VB\Latihan\AeryIce\EduTheGreat\obj\Debug\EduTheGreat.vbproj.GenerateResource.cache
+D:\LEARNN\Programming\VB\Latihan\AeryIce\EduTheGreat\obj\Debug\EduTheGreat.vbproj.CoreCompileInputs.cache
+D:\LEARNN\Programming\VB\Latihan\AeryIce\EduTheGreat\obj\Debug\EduTheGreat.exe
+D:\LEARNN\Programming\VB\Latihan\AeryIce\EduTheGreat\obj\Debug\EduTheGreat.xml
+D:\LEARNN\Programming\VB\Latihan\AeryIce\EduTheGreat\obj\Debug\EduTheGreat.pdb
