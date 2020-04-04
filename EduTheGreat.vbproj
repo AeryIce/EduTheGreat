@@ -198,5 +198,14 @@
   <ItemGroup>
     <None Include="Resources\available_updates_16px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_window_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

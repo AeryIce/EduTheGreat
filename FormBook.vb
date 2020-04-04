@@ -1,8 +1,25 @@
 ﻿Imports System.Data.SqlClient
+Imports System.IO
 Public Class FormBook
 
     Sub BersihkanTextBoxCariBuku()
         TextBoxCariBuku.Clear()
+    End Sub
+
+    Sub Reset()
+        TextBoxISBN.Clear()
+        TextBoxJudul.Clear()
+        TextBoxKategori.Clear()
+        TextBox1StDateIn.Clear()
+        TextBoxBinlok.Clear()
+        TextBoxCIP.Clear()
+        TextBoxPengarang.Clear()
+        TextBoxPublisher.Clear()
+        TextBoxQty.Clear()
+        TextBoxSubject.Clear()
+        TextBoxCariBuku.Clear()
+        PBBook.Image = Nothing
+
     End Sub
 
     Sub LoadDGVBook()
@@ -121,6 +138,9 @@ Public Class FormBook
                     TextBoxPublisher.Text = Dr.Item("Publiser")
                     TextBoxQty.Text = Dr.Item("Qty")
                     TextBoxSubject.Text = Dr.Item("Subject")
+                    Dim data As Byte() = DirectCast(Dr("Gambar"), Byte())
+                    Dim ms As New MemoryStream(data)
+                    PBBook.Image = Image.FromStream(ms)
                 Else
                     If MsgBox("Maaf,Data Tidak Ada, Ulangi?", MsgBoxStyle.YesNo, "Konfirmasi") = MsgBoxResult.Yes Then
 
@@ -159,6 +179,9 @@ Public Class FormBook
                 TextBoxPublisher.Text = Dr.Item("Publiser")
                 TextBoxQty.Text = Dr.Item("Qty")
                 TextBoxSubject.Text = Dr.Item("Subject")
+                Dim data As Byte() = DirectCast(Dr("Gambar"), Byte())
+                Dim ms As New MemoryStream(data)
+                PBBook.Image = Image.FromStream(ms)
             Else
                 If MsgBox("Maaf,Data Tidak Ada, Ulangi?", MsgBoxStyle.YesNo, "Konfirmasi") = MsgBoxResult.Yes Then
                     Me.Show()
@@ -173,5 +196,14 @@ Public Class FormBook
             End If
         End If
 
+    End Sub
+
+    Private Sub GroupBoxDataBuku_Enter(sender As Object, e As EventArgs) Handles GroupBoxDataBuku.Enter
+
+    End Sub
+
+    Private Sub ButtonReset_Click(sender As Object, e As EventArgs) Handles ButtonReset.Click
+        Call Reset()
+        Call LoadDGVBook()
     End Sub
 End Class

@@ -54,22 +54,24 @@ Partial Class FormBook
 		Me.GroupBoxCariData = New System.Windows.Forms.GroupBox()
 		Me.TextBoxCariBuku = New System.Windows.Forms.TextBox()
 		Me.DGVBook = New System.Windows.Forms.DataGridView()
-		Me.ButtonReset = New System.Windows.Forms.Button()
-		Me.ButtonEdit = New System.Windows.Forms.Button()
-		Me.ButtonDelete = New System.Windows.Forms.Button()
+		Me.GroupBox2 = New System.Windows.Forms.GroupBox()
 		Me.ButtonCreate = New System.Windows.Forms.Button()
+		Me.ButtonReset = New System.Windows.Forms.Button()
+		Me.ButtonDelete = New System.Windows.Forms.Button()
+		Me.ButtonEdit = New System.Windows.Forms.Button()
 		Me.ButtonCari = New System.Windows.Forms.Button()
 		Me.ButtonReport = New System.Windows.Forms.Button()
 		Me.ButtonAdmin = New System.Windows.Forms.Button()
 		Me.ButtonBook = New System.Windows.Forms.Button()
 		Me.ButtonExit = New System.Windows.Forms.Button()
 		Me.ButtonHome = New System.Windows.Forms.Button()
-		Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+		Me.PBBook = New System.Windows.Forms.PictureBox()
 		Me.PanelKiri.SuspendLayout()
 		Me.GroupBoxDataBuku.SuspendLayout()
 		Me.GroupBoxCariData.SuspendLayout()
 		CType(Me.DGVBook, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.GroupBox2.SuspendLayout()
+		CType(Me.PBBook, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.SuspendLayout()
 		'
 		'PanelKiri
@@ -148,6 +150,7 @@ Partial Class FormBook
 		'
 		'GroupBoxDataBuku
 		'
+		Me.GroupBoxDataBuku.Controls.Add(Me.PBBook)
 		Me.GroupBoxDataBuku.Controls.Add(Me.TextBoxQty)
 		Me.GroupBoxDataBuku.Controls.Add(Me.LabelQty)
 		Me.GroupBoxDataBuku.Controls.Add(Me.TextBoxBinlok)
@@ -172,14 +175,14 @@ Partial Class FormBook
 		Me.GroupBoxDataBuku.Font = New System.Drawing.Font("Lucida Console", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.GroupBoxDataBuku.Location = New System.Drawing.Point(104, 147)
 		Me.GroupBoxDataBuku.Name = "GroupBoxDataBuku"
-		Me.GroupBoxDataBuku.Size = New System.Drawing.Size(550, 145)
+		Me.GroupBoxDataBuku.Size = New System.Drawing.Size(563, 145)
 		Me.GroupBoxDataBuku.TabIndex = 6
 		Me.GroupBoxDataBuku.TabStop = False
 		Me.GroupBoxDataBuku.Text = "Data Buku"
 		'
 		'TextBoxQty
 		'
-		Me.TextBoxQty.Location = New System.Drawing.Point(453, 72)
+		Me.TextBoxQty.Location = New System.Drawing.Point(350, 117)
 		Me.TextBoxQty.Name = "TextBoxQty"
 		Me.TextBoxQty.Size = New System.Drawing.Size(84, 18)
 		Me.TextBoxQty.TabIndex = 19
@@ -187,15 +190,15 @@ Partial Class FormBook
 		'LabelQty
 		'
 		Me.LabelQty.AutoSize = True
-		Me.LabelQty.Location = New System.Drawing.Point(344, 75)
+		Me.LabelQty.Location = New System.Drawing.Point(258, 120)
 		Me.LabelQty.Name = "LabelQty"
-		Me.LabelQty.Size = New System.Drawing.Size(103, 11)
+		Me.LabelQty.Size = New System.Drawing.Size(89, 11)
 		Me.LabelQty.TabIndex = 18
-		Me.LabelQty.Text = "QTY          :"
+		Me.LabelQty.Text = "QTY        :"
 		'
 		'TextBoxBinlok
 		'
-		Me.TextBoxBinlok.Location = New System.Drawing.Point(453, 51)
+		Me.TextBoxBinlok.Location = New System.Drawing.Point(350, 96)
 		Me.TextBoxBinlok.Name = "TextBoxBinlok"
 		Me.TextBoxBinlok.Size = New System.Drawing.Size(84, 18)
 		Me.TextBoxBinlok.TabIndex = 17
@@ -203,15 +206,15 @@ Partial Class FormBook
 		'LabelBinlok
 		'
 		Me.LabelBinlok.AutoSize = True
-		Me.LabelBinlok.Location = New System.Drawing.Point(344, 54)
+		Me.LabelBinlok.Location = New System.Drawing.Point(258, 99)
 		Me.LabelBinlok.Name = "LabelBinlok"
-		Me.LabelBinlok.Size = New System.Drawing.Size(103, 11)
+		Me.LabelBinlok.Size = New System.Drawing.Size(89, 11)
 		Me.LabelBinlok.TabIndex = 16
-		Me.LabelBinlok.Text = "Binlok       :"
+		Me.LabelBinlok.Text = "Binlok     :"
 		'
 		'TextBox1StDateIn
 		'
-		Me.TextBox1StDateIn.Location = New System.Drawing.Point(453, 30)
+		Me.TextBox1StDateIn.Location = New System.Drawing.Point(350, 75)
 		Me.TextBox1StDateIn.Name = "TextBox1StDateIn"
 		Me.TextBox1StDateIn.Size = New System.Drawing.Size(84, 18)
 		Me.TextBox1StDateIn.TabIndex = 15
@@ -219,15 +222,15 @@ Partial Class FormBook
 		'Label1StDateIn
 		'
 		Me.Label1StDateIn.AutoSize = True
-		Me.Label1StDateIn.Location = New System.Drawing.Point(344, 33)
+		Me.Label1StDateIn.Location = New System.Drawing.Point(258, 78)
 		Me.Label1StDateIn.Name = "Label1StDateIn"
-		Me.Label1StDateIn.Size = New System.Drawing.Size(103, 11)
+		Me.Label1StDateIn.Size = New System.Drawing.Size(89, 11)
 		Me.Label1StDateIn.TabIndex = 14
-		Me.Label1StDateIn.Text = "1StDateIn    :"
+		Me.Label1StDateIn.Text = "1StDateIn  :"
 		'
 		'TextBoxKategori
 		'
-		Me.TextBoxKategori.Location = New System.Drawing.Point(117, 119)
+		Me.TextBoxKategori.Location = New System.Drawing.Point(97, 119)
 		Me.TextBoxKategori.Name = "TextBoxKategori"
 		Me.TextBoxKategori.Size = New System.Drawing.Size(136, 18)
 		Me.TextBoxKategori.TabIndex = 13
@@ -237,13 +240,13 @@ Partial Class FormBook
 		Me.LabelKategori.AutoSize = True
 		Me.LabelKategori.Location = New System.Drawing.Point(8, 122)
 		Me.LabelKategori.Name = "LabelKategori"
-		Me.LabelKategori.Size = New System.Drawing.Size(103, 11)
+		Me.LabelKategori.Size = New System.Drawing.Size(82, 11)
 		Me.LabelKategori.TabIndex = 12
-		Me.LabelKategori.Text = "Kategori     :"
+		Me.LabelKategori.Text = "Kategori  :"
 		'
 		'TextBoxSubject
 		'
-		Me.TextBoxSubject.Location = New System.Drawing.Point(117, 98)
+		Me.TextBoxSubject.Location = New System.Drawing.Point(97, 98)
 		Me.TextBoxSubject.Name = "TextBoxSubject"
 		Me.TextBoxSubject.Size = New System.Drawing.Size(136, 18)
 		Me.TextBoxSubject.TabIndex = 11
@@ -253,13 +256,13 @@ Partial Class FormBook
 		Me.LabelSubject.AutoSize = True
 		Me.LabelSubject.Location = New System.Drawing.Point(8, 101)
 		Me.LabelSubject.Name = "LabelSubject"
-		Me.LabelSubject.Size = New System.Drawing.Size(103, 11)
+		Me.LabelSubject.Size = New System.Drawing.Size(82, 11)
 		Me.LabelSubject.TabIndex = 10
-		Me.LabelSubject.Text = "Subject      :"
+		Me.LabelSubject.Text = "Subject   :"
 		'
 		'TextBoxPengarang
 		'
-		Me.TextBoxPengarang.Location = New System.Drawing.Point(117, 76)
+		Me.TextBoxPengarang.Location = New System.Drawing.Point(96, 76)
 		Me.TextBoxPengarang.Name = "TextBoxPengarang"
 		Me.TextBoxPengarang.Size = New System.Drawing.Size(136, 18)
 		Me.TextBoxPengarang.TabIndex = 9
@@ -269,13 +272,13 @@ Partial Class FormBook
 		Me.LabelPengarang.AutoSize = True
 		Me.LabelPengarang.Location = New System.Drawing.Point(8, 79)
 		Me.LabelPengarang.Name = "LabelPengarang"
-		Me.LabelPengarang.Size = New System.Drawing.Size(103, 11)
+		Me.LabelPengarang.Size = New System.Drawing.Size(82, 11)
 		Me.LabelPengarang.TabIndex = 8
-		Me.LabelPengarang.Text = "Pengarang    :"
+		Me.LabelPengarang.Text = "Pengarang :"
 		'
 		'TextBoxCIP
 		'
-		Me.TextBoxCIP.Location = New System.Drawing.Point(453, 9)
+		Me.TextBoxCIP.Location = New System.Drawing.Point(350, 54)
 		Me.TextBoxCIP.Name = "TextBoxCIP"
 		Me.TextBoxCIP.Size = New System.Drawing.Size(84, 18)
 		Me.TextBoxCIP.TabIndex = 7
@@ -283,15 +286,15 @@ Partial Class FormBook
 		'Label1
 		'
 		Me.Label1.AutoSize = True
-		Me.Label1.Location = New System.Drawing.Point(344, 12)
+		Me.Label1.Location = New System.Drawing.Point(258, 57)
 		Me.Label1.Name = "Label1"
-		Me.Label1.Size = New System.Drawing.Size(103, 11)
+		Me.Label1.Size = New System.Drawing.Size(89, 11)
 		Me.Label1.TabIndex = 6
-		Me.Label1.Text = "CIP          :"
+		Me.Label1.Text = "CIP        :"
 		'
 		'TextBoxPublisher
 		'
-		Me.TextBoxPublisher.Location = New System.Drawing.Point(117, 54)
+		Me.TextBoxPublisher.Location = New System.Drawing.Point(96, 54)
 		Me.TextBoxPublisher.Name = "TextBoxPublisher"
 		Me.TextBoxPublisher.Size = New System.Drawing.Size(136, 18)
 		Me.TextBoxPublisher.TabIndex = 5
@@ -301,15 +304,15 @@ Partial Class FormBook
 		Me.LabelPublisher.AutoSize = True
 		Me.LabelPublisher.Location = New System.Drawing.Point(8, 57)
 		Me.LabelPublisher.Name = "LabelPublisher"
-		Me.LabelPublisher.Size = New System.Drawing.Size(103, 11)
+		Me.LabelPublisher.Size = New System.Drawing.Size(82, 11)
 		Me.LabelPublisher.TabIndex = 4
-		Me.LabelPublisher.Text = "Publisher    :"
+		Me.LabelPublisher.Text = "Publisher :"
 		'
 		'TextBoxJudul
 		'
-		Me.TextBoxJudul.Location = New System.Drawing.Point(117, 33)
+		Me.TextBoxJudul.Location = New System.Drawing.Point(96, 34)
 		Me.TextBoxJudul.Name = "TextBoxJudul"
-		Me.TextBoxJudul.Size = New System.Drawing.Size(222, 18)
+		Me.TextBoxJudul.Size = New System.Drawing.Size(164, 18)
 		Me.TextBoxJudul.TabIndex = 3
 		'
 		'LabelJudul
@@ -317,13 +320,13 @@ Partial Class FormBook
 		Me.LabelJudul.AutoSize = True
 		Me.LabelJudul.Location = New System.Drawing.Point(8, 36)
 		Me.LabelJudul.Name = "LabelJudul"
-		Me.LabelJudul.Size = New System.Drawing.Size(103, 11)
+		Me.LabelJudul.Size = New System.Drawing.Size(82, 11)
 		Me.LabelJudul.TabIndex = 2
-		Me.LabelJudul.Text = "Judul        :"
+		Me.LabelJudul.Text = "Judul     :"
 		'
 		'TextBoxISBN
 		'
-		Me.TextBoxISBN.Location = New System.Drawing.Point(117, 13)
+		Me.TextBoxISBN.Location = New System.Drawing.Point(96, 12)
 		Me.TextBoxISBN.Name = "TextBoxISBN"
 		Me.TextBoxISBN.Size = New System.Drawing.Size(136, 18)
 		Me.TextBoxISBN.TabIndex = 1
@@ -333,9 +336,9 @@ Partial Class FormBook
 		Me.LabelISBN.AutoSize = True
 		Me.LabelISBN.Location = New System.Drawing.Point(8, 16)
 		Me.LabelISBN.Name = "LabelISBN"
-		Me.LabelISBN.Size = New System.Drawing.Size(103, 11)
+		Me.LabelISBN.Size = New System.Drawing.Size(82, 11)
 		Me.LabelISBN.TabIndex = 0
-		Me.LabelISBN.Text = "ISBN         :"
+		Me.LabelISBN.Text = "ISBN      :"
 		'
 		'GroupBoxCariData
 		'
@@ -367,41 +370,19 @@ Partial Class FormBook
 		Me.DGVBook.Size = New System.Drawing.Size(684, 180)
 		Me.DGVBook.TabIndex = 8
 		'
-		'ButtonReset
+		'GroupBox2
 		'
-		Me.ButtonReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.ButtonReset.Image = Global.EduTheGreat.My.Resources.Resources.available_updates_16px
-		Me.ButtonReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.ButtonReset.Location = New System.Drawing.Point(24, 96)
-		Me.ButtonReset.Name = "ButtonReset"
-		Me.ButtonReset.Size = New System.Drawing.Size(68, 22)
-		Me.ButtonReset.TabIndex = 12
-		Me.ButtonReset.Text = "     Reset"
-		Me.ButtonReset.UseVisualStyleBackColor = True
-		'
-		'ButtonEdit
-		'
-		Me.ButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.ButtonEdit.Image = Global.EduTheGreat.My.Resources.Resources.edit_file_16px
-		Me.ButtonEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.ButtonEdit.Location = New System.Drawing.Point(24, 46)
-		Me.ButtonEdit.Name = "ButtonEdit"
-		Me.ButtonEdit.Size = New System.Drawing.Size(68, 22)
-		Me.ButtonEdit.TabIndex = 11
-		Me.ButtonEdit.Text = "     Edit"
-		Me.ButtonEdit.UseVisualStyleBackColor = True
-		'
-		'ButtonDelete
-		'
-		Me.ButtonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.ButtonDelete.Image = Global.EduTheGreat.My.Resources.Resources.trash_16px
-		Me.ButtonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.ButtonDelete.Location = New System.Drawing.Point(24, 70)
-		Me.ButtonDelete.Name = "ButtonDelete"
-		Me.ButtonDelete.Size = New System.Drawing.Size(68, 22)
-		Me.ButtonDelete.TabIndex = 10
-		Me.ButtonDelete.Text = "     Hapus"
-		Me.ButtonDelete.UseVisualStyleBackColor = True
+		Me.GroupBox2.Controls.Add(Me.ButtonCreate)
+		Me.GroupBox2.Controls.Add(Me.ButtonReset)
+		Me.GroupBox2.Controls.Add(Me.ButtonDelete)
+		Me.GroupBox2.Controls.Add(Me.ButtonEdit)
+		Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.GroupBox2.Location = New System.Drawing.Point(673, 147)
+		Me.GroupBox2.Name = "GroupBox2"
+		Me.GroupBox2.Size = New System.Drawing.Size(115, 145)
+		Me.GroupBox2.TabIndex = 13
+		Me.GroupBox2.TabStop = False
+		Me.GroupBox2.Text = "Ubah Data"
 		'
 		'ButtonCreate
 		'
@@ -415,6 +396,42 @@ Partial Class FormBook
 		Me.ButtonCreate.Text = "Tambah"
 		Me.ButtonCreate.TextAlign = System.Drawing.ContentAlignment.MiddleRight
 		Me.ButtonCreate.UseVisualStyleBackColor = True
+		'
+		'ButtonReset
+		'
+		Me.ButtonReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.ButtonReset.Image = Global.EduTheGreat.My.Resources.Resources.available_updates_16px
+		Me.ButtonReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.ButtonReset.Location = New System.Drawing.Point(24, 96)
+		Me.ButtonReset.Name = "ButtonReset"
+		Me.ButtonReset.Size = New System.Drawing.Size(68, 22)
+		Me.ButtonReset.TabIndex = 12
+		Me.ButtonReset.Text = "     Reset"
+		Me.ButtonReset.UseVisualStyleBackColor = True
+		'
+		'ButtonDelete
+		'
+		Me.ButtonDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.ButtonDelete.Image = Global.EduTheGreat.My.Resources.Resources.trash_16px
+		Me.ButtonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.ButtonDelete.Location = New System.Drawing.Point(24, 70)
+		Me.ButtonDelete.Name = "ButtonDelete"
+		Me.ButtonDelete.Size = New System.Drawing.Size(68, 22)
+		Me.ButtonDelete.TabIndex = 10
+		Me.ButtonDelete.Text = "     Hapus"
+		Me.ButtonDelete.UseVisualStyleBackColor = True
+		'
+		'ButtonEdit
+		'
+		Me.ButtonEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.ButtonEdit.Image = Global.EduTheGreat.My.Resources.Resources.edit_file_16px
+		Me.ButtonEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.ButtonEdit.Location = New System.Drawing.Point(24, 46)
+		Me.ButtonEdit.Name = "ButtonEdit"
+		Me.ButtonEdit.Size = New System.Drawing.Size(68, 22)
+		Me.ButtonEdit.TabIndex = 11
+		Me.ButtonEdit.Text = "     Edit"
+		Me.ButtonEdit.UseVisualStyleBackColor = True
 		'
 		'ButtonCari
 		'
@@ -507,19 +524,16 @@ Partial Class FormBook
 		Me.ButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight
 		Me.ButtonHome.UseVisualStyleBackColor = False
 		'
-		'GroupBox2
+		'PBBook
 		'
-		Me.GroupBox2.Controls.Add(Me.ButtonCreate)
-		Me.GroupBox2.Controls.Add(Me.ButtonReset)
-		Me.GroupBox2.Controls.Add(Me.ButtonDelete)
-		Me.GroupBox2.Controls.Add(Me.ButtonEdit)
-		Me.GroupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.GroupBox2.Location = New System.Drawing.Point(664, 147)
-		Me.GroupBox2.Name = "GroupBox2"
-		Me.GroupBox2.Size = New System.Drawing.Size(115, 145)
-		Me.GroupBox2.TabIndex = 13
-		Me.GroupBox2.TabStop = False
-		Me.GroupBox2.Text = "Ubah Data"
+		Me.PBBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+		Me.PBBook.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+		Me.PBBook.Location = New System.Drawing.Point(440, 12)
+		Me.PBBook.Name = "PBBook"
+		Me.PBBook.Size = New System.Drawing.Size(120, 123)
+		Me.PBBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+		Me.PBBook.TabIndex = 20
+		Me.PBBook.TabStop = False
 		'
 		'FormBook
 		'
@@ -544,6 +558,7 @@ Partial Class FormBook
 		Me.GroupBoxCariData.PerformLayout()
 		CType(Me.DGVBook, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.GroupBox2.ResumeLayout(False)
+		CType(Me.PBBook, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.ResumeLayout(False)
 
 	End Sub
@@ -591,4 +606,5 @@ Partial Class FormBook
 	Friend WithEvents ButtonEdit As Button
 	Friend WithEvents ButtonReset As Button
 	Friend WithEvents GroupBox2 As GroupBox
+	Friend WithEvents PBBook As PictureBox
 End Class

@@ -94,8 +94,8 @@ Partial Class FormLogin
 		'
 		'PictureBox2
 		'
-		Me.PictureBox2.Image = Global.EduTheGreat.My.Resources.Resources.password_96px
-		Me.PictureBox2.Location = New System.Drawing.Point(75, 21)
+		Me.PictureBox2.Image = Global.EduTheGreat.My.Resources.Resources.logo
+		Me.PictureBox2.Location = New System.Drawing.Point(82, 40)
 		Me.PictureBox2.Name = "PictureBox2"
 		Me.PictureBox2.Size = New System.Drawing.Size(96, 62)
 		Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -117,10 +117,10 @@ Partial Class FormLogin
 		Me.ButtonCancel.BackColor = System.Drawing.Color.Transparent
 		Me.ButtonCancel.FlatAppearance.BorderSize = 0
 		Me.ButtonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.ButtonCancel.Image = Global.EduTheGreat.My.Resources.Resources.cancel_32px
-		Me.ButtonCancel.Location = New System.Drawing.Point(141, 193)
+		Me.ButtonCancel.Image = Global.EduTheGreat.My.Resources.Resources.close_window_32px
+		Me.ButtonCancel.Location = New System.Drawing.Point(117, 179)
 		Me.ButtonCancel.Name = "ButtonCancel"
-		Me.ButtonCancel.Size = New System.Drawing.Size(41, 33)
+		Me.ButtonCancel.Size = New System.Drawing.Size(44, 33)
 		Me.ButtonCancel.TabIndex = 5
 		Me.ButtonCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
 		Me.ButtonCancel.UseVisualStyleBackColor = False
@@ -131,8 +131,8 @@ Partial Class FormLogin
 		Me.ButtonLogin.FlatAppearance.BorderSize = 0
 		Me.ButtonLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.ButtonLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.ButtonLogin.Image = Global.EduTheGreat.My.Resources.Resources.login_rounded_32px
-		Me.ButtonLogin.Location = New System.Drawing.Point(82, 193)
+		Me.ButtonLogin.Image = Global.EduTheGreat.My.Resources.Resources.import_32px
+		Me.ButtonLogin.Location = New System.Drawing.Point(82, 179)
 		Me.ButtonLogin.Name = "ButtonLogin"
 		Me.ButtonLogin.Size = New System.Drawing.Size(44, 33)
 		Me.ButtonLogin.TabIndex = 4
