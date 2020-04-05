@@ -10,7 +10,7 @@ Public Class FormBook
         TextBoxISBN.Clear()
         TextBoxJudul.Clear()
         TextBoxKategori.Clear()
-        TextBox1StDateIn.Clear()
+        TextBoxDateIn.Clear()
         TextBoxBinlok.Clear()
         TextBoxCIP.Clear()
         TextBoxPengarang.Clear()
@@ -20,6 +20,19 @@ Public Class FormBook
         TextBoxCariBuku.Clear()
         PBBook.Image = Nothing
 
+    End Sub
+    Sub EnabledtextBox()
+        TextBoxISBN.Enabled = True
+        TextBoxJudul.Enabled = True
+        TextBoxKategori.Enabled = True
+        TextBoxDateIn.Enabled = True
+        TextBoxBinlok.Enabled = True
+        TextBoxCIP.Enabled = True
+        TextBoxPengarang.Enabled = True
+        TextBoxPublisher.Enabled = True
+        TextBoxQty.Enabled = True
+        TextBoxSubject.Enabled = True
+        PBBook.Enabled = True
     End Sub
 
     Sub LoadDGVBook()
@@ -31,17 +44,22 @@ Public Class FormBook
         DGVBook.ReadOnly = True
     End Sub
 
+    Sub DisabledTextBox()
+        TextBoxISBN.Enabled = False
+        TextBoxJudul.Enabled = False
+        TextBoxKategori.Enabled = False
+        TextBoxDateIn.Enabled = False
+        TextBoxBinlok.Enabled = False
+        TextBoxCIP.Enabled = False
+        TextBoxPengarang.Enabled = False
+        TextBoxPublisher.Enabled = False
+        TextBoxQty.Enabled = False
+        TextBoxSubject.Enabled = False
+        PBBook.Enabled = False
+    End Sub
+
     Private Sub FormHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'TextBoxISBN.ReadOnly = True
-        'TextBoxJudul.ReadOnly = True
-        'TextBoxKategori.ReadOnly = True
-        'TextBox1StDateIn.ReadOnly = True
-        'TextBoxBinlok.ReadOnly = True
-        'TextBoxCIP.ReadOnly = True
-        'TextBoxPengarang.ReadOnly = True
-        'TextBoxPublisher.ReadOnly = True
-        'TextBoxQty.ReadOnly = True
-        'TextBoxSubject.ReadOnly = True
+        Call DisabledTextBox()
         Call LoadDGVBook()
 
     End Sub
@@ -129,7 +147,7 @@ Public Class FormBook
                     DGVBook.DataSource = Ds.Tables(0)
 
                     TextBoxISBN.Text = Dr.Item("ISBN")
-                    TextBox1StDateIn.Text = Dr.Item("FirstDateIn")
+                    TextBoxDateIn.Text = Dr.Item("FirstDateIn")
                     TextBoxBinlok.Text = Dr.Item("Binlok")
                     TextBoxCIP.Text = Dr.Item("CIP")
                     TextBoxJudul.Text = Dr.Item("Judul")
@@ -170,7 +188,7 @@ Public Class FormBook
                 DGVBook.DataSource = Ds.Tables(0)
 
                 TextBoxISBN.Text = Dr.Item("ISBN")
-                TextBox1StDateIn.Text = Dr.Item("FirstDateIn")
+                TextBoxDateIn.Text = Dr.Item("FirstDateIn")
                 TextBoxBinlok.Text = Dr.Item("Binlok")
                 TextBoxCIP.Text = Dr.Item("CIP")
                 TextBoxJudul.Text = Dr.Item("Judul")
@@ -203,7 +221,87 @@ Public Class FormBook
     End Sub
 
     Private Sub ButtonReset_Click(sender As Object, e As EventArgs) Handles ButtonReset.Click
+        Call DisabledTextBox()
         Call Reset()
         Call LoadDGVBook()
+        ButtonTambah.Text = "Tambah"
+        ButtonEdit.Visible = True
+        ButtonDelete.Visible = True
     End Sub
+
+    Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
+        TextBoxISBN.Focus()
+        ButtonTambah.Text = "Save"
+        ButtonEdit.Visible = False
+        ButtonDelete.Visible = False
+        If ButtonTambah.Text = "Save" Then
+            Call EnabledtextBox()
+            Call Koneksi()
+
+        End If
+    End Sub
+
+    Private Sub TextBoxISBN_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxISBN.KeyPress
+        If e.KeyChar = Chr(13) Then
+            TextBoxJudul.Focus()
+        End If
+
+    End Sub
+    Private Sub TextBoxJudul_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxJudul.KeyPress
+        If e.KeyChar = Chr(13) Then
+            TextBoxPublisher.Focus()
+        End If
+
+    End Sub
+    Private Sub TextBoxPublisher_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxPublisher.KeyPress
+        If e.KeyChar = Chr(13) Then
+            TextBoxPengarang.Focus()
+        End If
+
+    End Sub
+    Private Sub TextBoxpengarang_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxPengarang.KeyPress
+        If e.KeyChar = Chr(13) Then
+            TextBoxSubject.Focus()
+        End If
+
+    End Sub
+    Private Sub TextBoxSubject_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxSubject.KeyPress
+        If e.KeyChar = Chr(13) Then
+            TextBoxKategori.Focus()
+        End If
+
+    End Sub
+    Private Sub TextBoxKategori_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxKategori.KeyPress
+        If e.KeyChar = Chr(13) Then
+            TextBoxCIP.Focus()
+        End If
+
+    End Sub
+    Private Sub TextBoxCIP_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxCIP.KeyPress
+        If e.KeyChar = Chr(13) Then
+            TextBoxDateIn.Focus()
+        End If
+
+    End Sub
+    Private Sub TextBoxDateIn_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxDateIn.KeyPress
+        If e.KeyChar = Chr(13) Then
+            TextBoxBinlok.Focus()
+        End If
+
+    End Sub
+    Private Sub TextBoxBinlok_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxBinlok.KeyPress
+        If e.KeyChar = Chr(13) Then
+            TextBoxQty.Focus()
+        End If
+
+    End Sub
+    Private Sub TextBoxQty_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxQty.KeyPress
+        If e.KeyChar = Chr(13) Then
+            PBBook.Focus()
+            ButtonTambah.Focus()
+        End If
+
+    End Sub
+
+
 End Class
