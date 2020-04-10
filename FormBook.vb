@@ -10,7 +10,7 @@ Public Class FormBook
         TextBoxISBN.Clear()
         TextBoxJudul.Clear()
         TextBoxKategori.Clear()
-        TextBoxDateIn.Clear()
+        DTPBook.Text = Nothing
         TextBoxBinlok.Clear()
         TextBoxCIP.Clear()
         TextBoxPengarang.Clear()
@@ -25,7 +25,7 @@ Public Class FormBook
         TextBoxISBN.Enabled = True
         TextBoxJudul.Enabled = True
         TextBoxKategori.Enabled = True
-        TextBoxDateIn.Enabled = True
+        DTPBook.Enabled = True
         TextBoxBinlok.Enabled = True
         TextBoxCIP.Enabled = True
         TextBoxPengarang.Enabled = True
@@ -48,7 +48,7 @@ Public Class FormBook
         TextBoxISBN.Enabled = False
         TextBoxJudul.Enabled = False
         TextBoxKategori.Enabled = False
-        TextBoxDateIn.Enabled = False
+        DTPBook.Enabled = False
         TextBoxBinlok.Enabled = False
         TextBoxCIP.Enabled = False
         TextBoxPengarang.Enabled = False
@@ -147,7 +147,7 @@ Public Class FormBook
                     DGVBook.DataSource = Ds.Tables(0)
 
                     TextBoxISBN.Text = Dr.Item("ISBN")
-                    TextBoxDateIn.Text = Dr.Item("FirstDateIn")
+                    DTPBook.Text = Dr.Item("FirstDateIn")
                     TextBoxBinlok.Text = Dr.Item("Binlok")
                     TextBoxCIP.Text = Dr.Item("CIP")
                     TextBoxJudul.Text = Dr.Item("Judul")
@@ -188,7 +188,7 @@ Public Class FormBook
                 DGVBook.DataSource = Ds.Tables(0)
 
                 TextBoxISBN.Text = Dr.Item("ISBN")
-                TextBoxDateIn.Text = Dr.Item("FirstDateIn")
+                DTPBook.Text = Dr.Item("FirstDateIn")
                 TextBoxBinlok.Text = Dr.Item("Binlok")
                 TextBoxCIP.Text = Dr.Item("CIP")
                 TextBoxJudul.Text = Dr.Item("Judul")
@@ -224,21 +224,31 @@ Public Class FormBook
         Call DisabledTextBox()
         Call Reset()
         Call LoadDGVBook()
+        ButtonTambah.Visible = True
         ButtonTambah.Text = "Tambah"
         ButtonEdit.Visible = True
+        ButtonEdit.Image = Global.EduTheGreat.My.Resources.Resources.edit_file_16px
+        ButtonEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        ButtonEdit.Text = "Edit"
+        ButtonDelete.Text = "Hapus"
         ButtonDelete.Visible = True
+        ButtonDelete.Image = Global.EduTheGreat.My.Resources.Resources.trash_16px
+        ButtonDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        ButtonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
     End Sub
 
     Private Sub ButtonTambah_Click(sender As Object, e As EventArgs) Handles ButtonTambah.Click
+        Call EnabledtextBox()
         TextBoxISBN.Focus()
-        ButtonTambah.Text = "Save"
-        ButtonEdit.Visible = False
-        ButtonDelete.Visible = False
-        If ButtonTambah.Text = "Save" Then
-            Call EnabledtextBox()
-            Call Koneksi()
+        ButtonTambah.Visible = False
 
-        End If
+        ButtonEdit.Text = "Pilih"
+        ButtonEdit.Image = Global.EduTheGreat.My.Resources.Resources.picture_16px
+
+        ButtonDelete.Text = "Simpan"
+        ButtonDelete.Image = Global.EduTheGreat.My.Resources.Resources.save_16px
+        ButtonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+
     End Sub
 
     Private Sub TextBoxISBN_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxISBN.KeyPress
@@ -279,11 +289,11 @@ Public Class FormBook
     End Sub
     Private Sub TextBoxCIP_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxCIP.KeyPress
         If e.KeyChar = Chr(13) Then
-            TextBoxDateIn.Focus()
+
         End If
 
     End Sub
-    Private Sub TextBoxDateIn_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBoxDateIn.KeyPress
+    Private Sub TextBoxDateIn_KeyPress(sender As Object, e As KeyPressEventArgs)
         If e.KeyChar = Chr(13) Then
             TextBoxBinlok.Focus()
         End If
@@ -303,5 +313,48 @@ Public Class FormBook
 
     End Sub
 
+    Private Sub ButtonEdit_Click(sender As Object, e As EventArgs) Handles ButtonEdit.Click
+        If ButtonEdit.Text = "Pilih" Then
+            Dim OFDGambar As New OpenFileDialog
 
+            If OFDGambar.ShowDialog = Windows.Forms.DialogResult.OK Then
+
+                PBBook.SizeMode = PictureBoxSizeMode.StretchImage
+                PBBook.Image = Image.FromFile(OFDGambar.FileName)
+
+            End If
+        End If
+
+    End Sub
+
+    Private Sub ButtonDelete_Click(sender As Object, e As EventArgs) Handles ButtonDelete.Click
+        If ButtonDelete.Text = "Simpan" Then
+            Call EnabledtextBox()
+            Call Koneksi()
+
+                Dim Ms As New MemoryStream
+                PBBook.Image.Save(Ms, PBBook.Image.RawFormat)
+                Dim Simpan As New SqlCommand("INSERT INTO Stock_Sample_Edu (ISBN,Judul,Publiser,Cip,Pengarang,Subject,Kategori,FirstDateIn,Binlok,Qty,Gambar) VALUES 
+            (@ISBN,@Judul,@Publiser,@Cip,@Pengarang,@Subject,@Kategori,@FirstDateIn,@Binlok,@Qty,@Gambar)", Conn)
+
+            Simpan.Parameters.Add("@ISBN", SqlDbType.VarChar).Value = TextBoxISBN.Text
+            Simpan.Parameters.Add("Judul", SqlDbType.VarChar).Value = TextBoxJudul.Text
+            Simpan.Parameters.Add("@Publiser", SqlDbType.VarChar).Value = TextBoxPublisher.Text
+            Simpan.Parameters.Add("@Cip", SqlDbType.VarChar).Value = TextBoxCIP.Text
+            Simpan.Parameters.Add("Pengarang", SqlDbType.VarChar).Value = TextBoxPengarang.Text
+            Simpan.Parameters.Add("@Subject", SqlDbType.VarChar).Value = TextBoxSubject.Text
+            Simpan.Parameters.Add("@Kategori", SqlDbType.VarChar).Value = TextBoxKategori.Text
+            Simpan.Parameters.Add("@FirstDateIn", SqlDbType.DateTime).Value = DTPBook.Text
+            Simpan.Parameters.Add("@Binlok", SqlDbType.VarChar).Value = TextBoxBinlok.Text
+            Simpan.Parameters.Add("@Qty", SqlDbType.Int).Value = TextBoxQty.Text
+            Simpan.Parameters.Add("@Gambar", SqlDbType.VarBinary).Value = Ms.ToArray
+
+
+            If Simpan.ExecuteNonQuery() = 1 Then
+                MessageBox.Show("Data Sudah Tersimpan")
+            Else
+                MessageBox.Show("Data Gagal Disimpan")
+            End If
+        End If
+    End Sub
 End Class

@@ -127,9 +127,6 @@
   <data name="key_2_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\key_2_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stationery_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stationery_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="books_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\books_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,6 +139,9 @@
   <data name="enter_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\enter_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cancel_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cancel_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -150,6 +150,9 @@
   </data>
   <data name="home_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="close_window_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close_window_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,6 +166,9 @@
   <data name="password_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\password_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="picture_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picture_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="book_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\book_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -172,8 +178,8 @@
   <data name="trash_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trash_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="stationery_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stationery_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,7 +190,10 @@
   <data name="search_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="picture_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\picture_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
