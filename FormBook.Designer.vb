@@ -25,12 +25,19 @@ Partial Class FormBook
 		Me.PanelKiri = New System.Windows.Forms.Panel()
 		Me.Panel7 = New System.Windows.Forms.Panel()
 		Me.Panel5 = New System.Windows.Forms.Panel()
+		Me.ButtonReport = New System.Windows.Forms.Button()
 		Me.Panel4 = New System.Windows.Forms.Panel()
+		Me.ButtonAdmin = New System.Windows.Forms.Button()
 		Me.Panel6 = New System.Windows.Forms.Panel()
+		Me.ButtonBook = New System.Windows.Forms.Button()
 		Me.Panel3 = New System.Windows.Forms.Panel()
 		Me.Panel2 = New System.Windows.Forms.Panel()
+		Me.ButtonExit = New System.Windows.Forms.Button()
+		Me.ButtonHome = New System.Windows.Forms.Button()
 		Me.Panel1 = New System.Windows.Forms.Panel()
 		Me.GroupBoxDataBuku = New System.Windows.Forms.GroupBox()
+		Me.DTPBook = New System.Windows.Forms.DateTimePicker()
+		Me.PBBook = New System.Windows.Forms.PictureBox()
 		Me.TextBoxQty = New System.Windows.Forms.TextBox()
 		Me.LabelQty = New System.Windows.Forms.Label()
 		Me.TextBoxBinlok = New System.Windows.Forms.TextBox()
@@ -51,28 +58,23 @@ Partial Class FormBook
 		Me.TextBoxISBN = New System.Windows.Forms.TextBox()
 		Me.LabelISBN = New System.Windows.Forms.Label()
 		Me.GroupBoxCariData = New System.Windows.Forms.GroupBox()
+		Me.ButtonCari = New System.Windows.Forms.Button()
 		Me.TextBoxCariBuku = New System.Windows.Forms.TextBox()
 		Me.DGVBook = New System.Windows.Forms.DataGridView()
 		Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-		Me.OFDGambar = New System.Windows.Forms.OpenFileDialog()
 		Me.ButtonTambah = New System.Windows.Forms.Button()
 		Me.ButtonReset = New System.Windows.Forms.Button()
 		Me.ButtonDelete = New System.Windows.Forms.Button()
 		Me.ButtonEdit = New System.Windows.Forms.Button()
-		Me.ButtonCari = New System.Windows.Forms.Button()
-		Me.PBBook = New System.Windows.Forms.PictureBox()
-		Me.ButtonReport = New System.Windows.Forms.Button()
-		Me.ButtonAdmin = New System.Windows.Forms.Button()
-		Me.ButtonBook = New System.Windows.Forms.Button()
-		Me.ButtonExit = New System.Windows.Forms.Button()
-		Me.ButtonHome = New System.Windows.Forms.Button()
-		Me.DTPBook = New System.Windows.Forms.DateTimePicker()
+		Me.OFDGambar = New System.Windows.Forms.OpenFileDialog()
+		Me.ButtonPilihGambar = New System.Windows.Forms.Button()
+		Me.ButtonSimpan = New System.Windows.Forms.Button()
 		Me.PanelKiri.SuspendLayout()
 		Me.GroupBoxDataBuku.SuspendLayout()
+		CType(Me.PBBook, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.GroupBoxCariData.SuspendLayout()
 		CType(Me.DGVBook, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.GroupBox2.SuspendLayout()
-		CType(Me.PBBook, System.ComponentModel.ISupportInitialize).BeginInit()
 		Me.SuspendLayout()
 		'
 		'PanelKiri
@@ -109,6 +111,22 @@ Partial Class FormBook
 		Me.Panel5.Size = New System.Drawing.Size(11, 32)
 		Me.Panel5.TabIndex = 8
 		'
+		'ButtonReport
+		'
+		Me.ButtonReport.BackColor = System.Drawing.Color.LightSkyBlue
+		Me.ButtonReport.FlatAppearance.BorderSize = 0
+		Me.ButtonReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.ButtonReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.ButtonReport.Image = Global.EduTheGreat.My.Resources.Resources.stationery_32px
+		Me.ButtonReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.ButtonReport.Location = New System.Drawing.Point(12, 250)
+		Me.ButtonReport.Name = "ButtonReport"
+		Me.ButtonReport.Size = New System.Drawing.Size(83, 32)
+		Me.ButtonReport.TabIndex = 7
+		Me.ButtonReport.Text = "Report"
+		Me.ButtonReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+		Me.ButtonReport.UseVisualStyleBackColor = False
+		'
 		'Panel4
 		'
 		Me.Panel4.BackColor = System.Drawing.Color.Yellow
@@ -117,6 +135,22 @@ Partial Class FormBook
 		Me.Panel4.Size = New System.Drawing.Size(11, 32)
 		Me.Panel4.TabIndex = 4
 		'
+		'ButtonAdmin
+		'
+		Me.ButtonAdmin.BackColor = System.Drawing.Color.LightSkyBlue
+		Me.ButtonAdmin.FlatAppearance.BorderSize = 0
+		Me.ButtonAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.ButtonAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.ButtonAdmin.Image = Global.EduTheGreat.My.Resources.Resources.user_32px
+		Me.ButtonAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.ButtonAdmin.Location = New System.Drawing.Point(12, 172)
+		Me.ButtonAdmin.Name = "ButtonAdmin"
+		Me.ButtonAdmin.Size = New System.Drawing.Size(83, 32)
+		Me.ButtonAdmin.TabIndex = 3
+		Me.ButtonAdmin.Text = "Admin"
+		Me.ButtonAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+		Me.ButtonAdmin.UseVisualStyleBackColor = False
+		'
 		'Panel6
 		'
 		Me.Panel6.BackColor = System.Drawing.Color.Yellow
@@ -124,6 +158,22 @@ Partial Class FormBook
 		Me.Panel6.Name = "Panel6"
 		Me.Panel6.Size = New System.Drawing.Size(11, 32)
 		Me.Panel6.TabIndex = 6
+		'
+		'ButtonBook
+		'
+		Me.ButtonBook.BackColor = System.Drawing.Color.LightSkyBlue
+		Me.ButtonBook.FlatAppearance.BorderSize = 0
+		Me.ButtonBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.ButtonBook.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.ButtonBook.Image = Global.EduTheGreat.My.Resources.Resources.book_32px
+		Me.ButtonBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.ButtonBook.Location = New System.Drawing.Point(12, 210)
+		Me.ButtonBook.Name = "ButtonBook"
+		Me.ButtonBook.Size = New System.Drawing.Size(83, 32)
+		Me.ButtonBook.TabIndex = 5
+		Me.ButtonBook.Text = "Books"
+		Me.ButtonBook.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+		Me.ButtonBook.UseVisualStyleBackColor = False
 		'
 		'Panel3
 		'
@@ -140,6 +190,38 @@ Partial Class FormBook
 		Me.Panel2.Name = "Panel2"
 		Me.Panel2.Size = New System.Drawing.Size(11, 32)
 		Me.Panel2.TabIndex = 2
+		'
+		'ButtonExit
+		'
+		Me.ButtonExit.BackColor = System.Drawing.Color.LightSkyBlue
+		Me.ButtonExit.FlatAppearance.BorderSize = 0
+		Me.ButtonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.ButtonExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.ButtonExit.Image = Global.EduTheGreat.My.Resources.Resources.exit_sign_32px
+		Me.ButtonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.ButtonExit.Location = New System.Drawing.Point(14, 339)
+		Me.ButtonExit.Name = "ButtonExit"
+		Me.ButtonExit.Size = New System.Drawing.Size(81, 32)
+		Me.ButtonExit.TabIndex = 0
+		Me.ButtonExit.Text = "Exit"
+		Me.ButtonExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+		Me.ButtonExit.UseVisualStyleBackColor = False
+		'
+		'ButtonHome
+		'
+		Me.ButtonHome.BackColor = System.Drawing.Color.LightSkyBlue
+		Me.ButtonHome.FlatAppearance.BorderSize = 0
+		Me.ButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.ButtonHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+		Me.ButtonHome.Image = Global.EduTheGreat.My.Resources.Resources.home_32px
+		Me.ButtonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.ButtonHome.Location = New System.Drawing.Point(12, 134)
+		Me.ButtonHome.Name = "ButtonHome"
+		Me.ButtonHome.Size = New System.Drawing.Size(83, 32)
+		Me.ButtonHome.TabIndex = 0
+		Me.ButtonHome.Text = "Home"
+		Me.ButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+		Me.ButtonHome.UseVisualStyleBackColor = False
 		'
 		'Panel1
 		'
@@ -180,6 +262,27 @@ Partial Class FormBook
 		Me.GroupBoxDataBuku.TabIndex = 6
 		Me.GroupBoxDataBuku.TabStop = False
 		Me.GroupBoxDataBuku.Text = "Data Buku"
+		'
+		'DTPBook
+		'
+		Me.DTPBook.CustomFormat = "yyyy-MM-dd"
+		Me.DTPBook.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+		Me.DTPBook.Location = New System.Drawing.Point(323, 76)
+		Me.DTPBook.Name = "DTPBook"
+		Me.DTPBook.Size = New System.Drawing.Size(109, 18)
+		Me.DTPBook.TabIndex = 21
+		Me.DTPBook.Value = New Date(2020, 4, 10, 0, 0, 0, 0)
+		'
+		'PBBook
+		'
+		Me.PBBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+		Me.PBBook.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+		Me.PBBook.Location = New System.Drawing.Point(440, 12)
+		Me.PBBook.Name = "PBBook"
+		Me.PBBook.Size = New System.Drawing.Size(120, 123)
+		Me.PBBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+		Me.PBBook.TabIndex = 20
+		Me.PBBook.TabStop = False
 		'
 		'TextBoxQty
 		'
@@ -346,6 +449,17 @@ Partial Class FormBook
 		Me.GroupBoxCariData.TabStop = False
 		Me.GroupBoxCariData.Text = "Cari Data"
 		'
+		'ButtonCari
+		'
+		Me.ButtonCari.FlatAppearance.BorderSize = 0
+		Me.ButtonCari.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.ButtonCari.Image = Global.EduTheGreat.My.Resources.Resources.search_16px
+		Me.ButtonCari.Location = New System.Drawing.Point(27, 14)
+		Me.ButtonCari.Name = "ButtonCari"
+		Me.ButtonCari.Size = New System.Drawing.Size(22, 20)
+		Me.ButtonCari.TabIndex = 8
+		Me.ButtonCari.UseVisualStyleBackColor = True
+		'
 		'TextBoxCariBuku
 		'
 		Me.TextBoxCariBuku.Font = New System.Drawing.Font("Verdana", 6.75!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -366,6 +480,8 @@ Partial Class FormBook
 		'
 		'GroupBox2
 		'
+		Me.GroupBox2.Controls.Add(Me.ButtonSimpan)
+		Me.GroupBox2.Controls.Add(Me.ButtonPilihGambar)
 		Me.GroupBox2.Controls.Add(Me.ButtonTambah)
 		Me.GroupBox2.Controls.Add(Me.ButtonReset)
 		Me.GroupBox2.Controls.Add(Me.ButtonDelete)
@@ -378,10 +494,6 @@ Partial Class FormBook
 		Me.GroupBox2.TabStop = False
 		Me.GroupBox2.Text = "Ubah Data"
 		'
-		'OFDGambar
-		'
-		Me.OFDGambar.FileName = "NamaFile"
-		'
 		'ButtonTambah
 		'
 		Me.ButtonTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -391,7 +503,7 @@ Partial Class FormBook
 		Me.ButtonTambah.Name = "ButtonTambah"
 		Me.ButtonTambah.Size = New System.Drawing.Size(68, 22)
 		Me.ButtonTambah.TabIndex = 9
-		Me.ButtonTambah.Text = "Tambah"
+		Me.ButtonTambah.Text = "   Tambah"
 		Me.ButtonTambah.TextAlign = System.Drawing.ContentAlignment.MiddleRight
 		Me.ButtonTambah.UseVisualStyleBackColor = True
 		'
@@ -400,7 +512,7 @@ Partial Class FormBook
 		Me.ButtonReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
 		Me.ButtonReset.Image = Global.EduTheGreat.My.Resources.Resources.available_updates_16px
 		Me.ButtonReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.ButtonReset.Location = New System.Drawing.Point(24, 96)
+		Me.ButtonReset.Location = New System.Drawing.Point(24, 117)
 		Me.ButtonReset.Name = "ButtonReset"
 		Me.ButtonReset.Size = New System.Drawing.Size(68, 22)
 		Me.ButtonReset.TabIndex = 12
@@ -431,117 +543,31 @@ Partial Class FormBook
 		Me.ButtonEdit.Text = "     Edit"
 		Me.ButtonEdit.UseVisualStyleBackColor = True
 		'
-		'ButtonCari
+		'OFDGambar
 		'
-		Me.ButtonCari.FlatAppearance.BorderSize = 0
-		Me.ButtonCari.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.ButtonCari.Image = Global.EduTheGreat.My.Resources.Resources.search_16px
-		Me.ButtonCari.Location = New System.Drawing.Point(27, 14)
-		Me.ButtonCari.Name = "ButtonCari"
-		Me.ButtonCari.Size = New System.Drawing.Size(22, 20)
-		Me.ButtonCari.TabIndex = 8
-		Me.ButtonCari.UseVisualStyleBackColor = True
+		Me.OFDGambar.FileName = "NamaFile"
 		'
-		'PBBook
+		'ButtonPilihGambar
 		'
-		Me.PBBook.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-		Me.PBBook.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-		Me.PBBook.Location = New System.Drawing.Point(440, 12)
-		Me.PBBook.Name = "PBBook"
-		Me.PBBook.Size = New System.Drawing.Size(120, 123)
-		Me.PBBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-		Me.PBBook.TabIndex = 20
-		Me.PBBook.TabStop = False
+		Me.ButtonPilihGambar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.ButtonPilihGambar.Image = Global.EduTheGreat.My.Resources.Resources.picture_16px
+		Me.ButtonPilihGambar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.ButtonPilihGambar.Location = New System.Drawing.Point(24, 94)
+		Me.ButtonPilihGambar.Name = "ButtonPilihGambar"
+		Me.ButtonPilihGambar.Size = New System.Drawing.Size(29, 22)
+		Me.ButtonPilihGambar.TabIndex = 14
+		Me.ButtonPilihGambar.UseVisualStyleBackColor = True
 		'
-		'ButtonReport
+		'ButtonSimpan
 		'
-		Me.ButtonReport.BackColor = System.Drawing.Color.LightSkyBlue
-		Me.ButtonReport.FlatAppearance.BorderSize = 0
-		Me.ButtonReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.ButtonReport.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.ButtonReport.Image = Global.EduTheGreat.My.Resources.Resources.stationery_32px
-		Me.ButtonReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.ButtonReport.Location = New System.Drawing.Point(12, 250)
-		Me.ButtonReport.Name = "ButtonReport"
-		Me.ButtonReport.Size = New System.Drawing.Size(83, 32)
-		Me.ButtonReport.TabIndex = 7
-		Me.ButtonReport.Text = "Report"
-		Me.ButtonReport.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-		Me.ButtonReport.UseVisualStyleBackColor = False
-		'
-		'ButtonAdmin
-		'
-		Me.ButtonAdmin.BackColor = System.Drawing.Color.LightSkyBlue
-		Me.ButtonAdmin.FlatAppearance.BorderSize = 0
-		Me.ButtonAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.ButtonAdmin.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.ButtonAdmin.Image = Global.EduTheGreat.My.Resources.Resources.user_32px
-		Me.ButtonAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.ButtonAdmin.Location = New System.Drawing.Point(12, 172)
-		Me.ButtonAdmin.Name = "ButtonAdmin"
-		Me.ButtonAdmin.Size = New System.Drawing.Size(83, 32)
-		Me.ButtonAdmin.TabIndex = 3
-		Me.ButtonAdmin.Text = "Admin"
-		Me.ButtonAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-		Me.ButtonAdmin.UseVisualStyleBackColor = False
-		'
-		'ButtonBook
-		'
-		Me.ButtonBook.BackColor = System.Drawing.Color.LightSkyBlue
-		Me.ButtonBook.FlatAppearance.BorderSize = 0
-		Me.ButtonBook.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.ButtonBook.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.ButtonBook.Image = Global.EduTheGreat.My.Resources.Resources.book_32px
-		Me.ButtonBook.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.ButtonBook.Location = New System.Drawing.Point(12, 210)
-		Me.ButtonBook.Name = "ButtonBook"
-		Me.ButtonBook.Size = New System.Drawing.Size(83, 32)
-		Me.ButtonBook.TabIndex = 5
-		Me.ButtonBook.Text = "Books"
-		Me.ButtonBook.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-		Me.ButtonBook.UseVisualStyleBackColor = False
-		'
-		'ButtonExit
-		'
-		Me.ButtonExit.BackColor = System.Drawing.Color.LightSkyBlue
-		Me.ButtonExit.FlatAppearance.BorderSize = 0
-		Me.ButtonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.ButtonExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.ButtonExit.Image = Global.EduTheGreat.My.Resources.Resources.exit_sign_32px
-		Me.ButtonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.ButtonExit.Location = New System.Drawing.Point(14, 339)
-		Me.ButtonExit.Name = "ButtonExit"
-		Me.ButtonExit.Size = New System.Drawing.Size(81, 32)
-		Me.ButtonExit.TabIndex = 0
-		Me.ButtonExit.Text = "Exit"
-		Me.ButtonExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-		Me.ButtonExit.UseVisualStyleBackColor = False
-		'
-		'ButtonHome
-		'
-		Me.ButtonHome.BackColor = System.Drawing.Color.LightSkyBlue
-		Me.ButtonHome.FlatAppearance.BorderSize = 0
-		Me.ButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-		Me.ButtonHome.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-		Me.ButtonHome.Image = Global.EduTheGreat.My.Resources.Resources.home_32px
-		Me.ButtonHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-		Me.ButtonHome.Location = New System.Drawing.Point(12, 134)
-		Me.ButtonHome.Name = "ButtonHome"
-		Me.ButtonHome.Size = New System.Drawing.Size(83, 32)
-		Me.ButtonHome.TabIndex = 0
-		Me.ButtonHome.Text = "Home"
-		Me.ButtonHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-		Me.ButtonHome.UseVisualStyleBackColor = False
-		'
-		'DTPBook
-		'
-		Me.DTPBook.CustomFormat = "yyyy-MM-dd"
-		Me.DTPBook.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-		Me.DTPBook.Location = New System.Drawing.Point(323, 76)
-		Me.DTPBook.Name = "DTPBook"
-		Me.DTPBook.Size = New System.Drawing.Size(109, 18)
-		Me.DTPBook.TabIndex = 21
-		Me.DTPBook.Value = New Date(2020, 4, 10, 0, 0, 0, 0)
+		Me.ButtonSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+		Me.ButtonSimpan.Image = Global.EduTheGreat.My.Resources.Resources.save_16px
+		Me.ButtonSimpan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+		Me.ButtonSimpan.Location = New System.Drawing.Point(63, 94)
+		Me.ButtonSimpan.Name = "ButtonSimpan"
+		Me.ButtonSimpan.Size = New System.Drawing.Size(29, 22)
+		Me.ButtonSimpan.TabIndex = 15
+		Me.ButtonSimpan.UseVisualStyleBackColor = True
 		'
 		'FormBook
 		'
@@ -562,11 +588,11 @@ Partial Class FormBook
 		Me.PanelKiri.ResumeLayout(False)
 		Me.GroupBoxDataBuku.ResumeLayout(False)
 		Me.GroupBoxDataBuku.PerformLayout()
+		CType(Me.PBBook, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.GroupBoxCariData.ResumeLayout(False)
 		Me.GroupBoxCariData.PerformLayout()
 		CType(Me.DGVBook, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.GroupBox2.ResumeLayout(False)
-		CType(Me.PBBook, System.ComponentModel.ISupportInitialize).EndInit()
 		Me.ResumeLayout(False)
 
 	End Sub
@@ -616,4 +642,6 @@ Partial Class FormBook
 	Friend WithEvents PBBook As PictureBox
 	Friend WithEvents OFDGambar As OpenFileDialog
 	Friend WithEvents DTPBook As DateTimePicker
+	Friend WithEvents ButtonSimpan As Button
+	Friend WithEvents ButtonPilihGambar As Button
 End Class
